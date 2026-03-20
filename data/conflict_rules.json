@@ -1,0 +1,16 @@
+{
+  "drug_classes": {
+    "lisinopril": "ace_inhibitor",
+    "ramipril": "ace_inhibitor",
+    "losartan": "arb",
+    "valsartan": "arb",
+    "amlodipine": "calcium_channel_blocker",
+    "metformin": "biguanide",
+    "insulin": "insulin",
+    "atorvastatin": "statin",
+    "simvastatin": "statin"
+  },
+  "blacklisted_class_combinations": [
+    ["ace_inhibitor", "arb"]
+  ]
+}
