@@ -369,16 +369,11 @@ All core logic — including:
 
 was implemented, tested, and validated manually.
 
-AI was used as a **support tool**, not as a substitute for system design or implementation.
-
 ---
 
 ## 📝 License
 
-[Add appropriate license here]
+This project is licensed under the MIT License.
 
 ---
 
-## 📧 Support
-
-For questions or issues, please open a GitHub issue or contact the maintainers.
