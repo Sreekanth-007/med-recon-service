@@ -356,18 +356,23 @@ pip install -r requirements.txt
 
 ## 🤖 AI Usage
 
-AI tools were used during development to assist with:
+### What AI was used for:
+- **Boilerplate generation**: FastAPI route templates, MongoDB connection setup, and Pydantic schema scaffolding
+- **Debugging**: Connection errors, async handling patterns, and error response formatting
+- **Documentation**: README structure, endpoint examples, and workflow descriptions
 
-- Debugging FastAPI and MongoDB connection issues
-- Refining project structure and API design
-- Improving documentation clarity
+### What was reviewed and changed manually:
+- **Conflict detection logic**: Reimplemented the core conflict detection algorithm to be more explicit about rule matching
+- **Data schemas**: Modified Pydantic models to ensure strict validation and proper typing across all endpoints
+- **API error handling**: Enhanced all error responses with meaningful messages and proper HTTP status codes
+- **MongoDB queries**: Reviewed and optimized aggregation pipelines for reporting endpoints
 
-All core logic — including:
-- Data modeling
-- Conflict detection rules
-- API design decisions
+### Example: Conflict Detection Disagreement
+**Initial AI output**: Suggested a simple equality-based approach to detect dosage conflicts.
 
-was implemented, tested, and validated manually.
+**Why it was changed**: This failed to account for dosage unit variations (e.g., "10mg" vs "1000mcg"). Instead, I implemented a normalization step that converts all dosages to a standard unit before comparison, which is clinically accurate and prevents false positives.
+
+The final implementation in `conflict_detector.py` includes this normalization preprocessing, which the AI originally missed in its first suggestion.
 
 ---
 
